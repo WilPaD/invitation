@@ -1,6 +1,14 @@
+'use client'
+import { useState } from "react";
 import Image from "next/image";
+import BackgroundMusic from "./components/BackgroundMusic";
+import Location from "./components/Location";
 
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const toggleMusic = () => {
+    setIsPlaying(prevState => !prevState);
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
@@ -108,6 +116,14 @@ export default function Home() {
           </p>
         </a>
       </div>
+
+      <div>
+        <button onClick={toggleMusic} style={{ position: 'fixed', top: '10px', left: '10px', zIndex: 1000 }}>
+          {isPlaying ? 'Apagar Música' : 'Encender Música'}
+        </button>
+      </div>
+      <BackgroundMusic src="OutofSight.mp3" isPlaying={isPlaying} />
+      <Location location="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"/>
     </main>
   );
 }
