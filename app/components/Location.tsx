@@ -8,6 +8,14 @@ interface LocationProps {
 }
 
 const Location: React.FC<LocationProps> = ({ location }) => {
+  const handleButtonClick = () => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = location;
+    } else {
+      window.open(location, '_blank');
+    }
+  };
   return (
     <div className="flex flex-col items-center">
       <div className="text-blue-500 mb-4">
@@ -22,7 +30,7 @@ const Location: React.FC<LocationProps> = ({ location }) => {
       </div>
       <Button
         className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition"
-        onClick={() => window.open(location, "_blank")}
+        onClick={handleButtonClick}
       >
         Abrir en Google Maps
       </Button>
