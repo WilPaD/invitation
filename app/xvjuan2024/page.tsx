@@ -1,25 +1,93 @@
 "use client";
-import { useState } from "react";
+import { useState, FC } from "react";
 import BackgroundMusic from "@/app/components/BackgroundMusic";
 import Location from "@/app/components/Location";
 import { Button } from "keep-react";
 import { Play, Pause } from "phosphor-react";
-
-import { motion } from "framer-motion";
-import { LampContainer } from "@/app/components/lamp";
+import {
+  BuildingOfficeIcon,
+  CreditCardIcon,
+  UserIcon,
+  UsersIcon,
+} from "@heroicons/react/20/solid";
 
 export default function Roberto() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const toggleMusic = () => {
     setIsPlaying((prevState) => !prevState);
   };
+
+  type Tab = {
+    name: string;
+    href: string;
+    icon: FC<React.SVGProps<SVGSVGElement>>;
+    current: boolean;
+  };
+
+  const tabs: Tab[] = [
+    { name: "My Account", href: "#", icon: UserIcon, current: false },
+    { name: "Company", href: "#", icon: BuildingOfficeIcon, current: false },
+    { name: "Team Members", href: "#", icon: UsersIcon, current: true },
+    { name: "Billing", href: "#", icon: CreditCardIcon, current: false },
+  ];
+
+  function classNames(...classes: string[]): string {
+    return classes.filter(Boolean).join(" ");
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
+        <div className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+          <div>
+            <div className="sm:hidden">
+              <label htmlFor="tabs" className="sr-only">
+                Select a tab
+              </label>
+              {/* Use an "onChange" listener to redirect the user to the selected tab URL. */}
+              <select
+                id="tabs"
+                name="tabs"
+                defaultValue={tabs.find((tab) => tab.current)?.name}
+                className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+              >
+                {tabs.map((tab) => (
+                  <option key={tab.name}>{tab.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="hidden sm:block">
+              <div className="border-b border-gray-200">
+                <nav aria-label="Tabs" className="-mb-px flex space-x-8">
+                  {tabs.map((tab) => (
+                    <a
+                      key={tab.name}
+                      href={tab.href}
+                      aria-current={tab.current ? "page" : undefined}
+                      className={classNames(
+                        tab.current
+                          ? "border-indigo-500 text-indigo-600"
+                          : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                        "group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium"
+                      )}
+                    >
+                      <tab.icon
+                        aria-hidden="true"
+                        className={classNames(
+                          tab.current
+                            ? "text-indigo-500"
+                            : "text-gray-400 group-hover:text-gray-500",
+                          "-ml-0.5 mr-2 h-5 w-5"
+                        )}
+                      />
+                      <span>{tab.name}</span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
