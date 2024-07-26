@@ -4,12 +4,7 @@ import BackgroundMusic from "@/app/components/BackgroundMusic";
 import Location from "@/app/components/Location";
 import { Button } from "keep-react";
 import { Play, Pause } from "phosphor-react";
-import {
-  BuildingOfficeIcon,
-  CreditCardIcon,
-  UserIcon,
-  UsersIcon,
-} from "@heroicons/react/20/solid";
+import { MapPinIcon, BookmarkIcon, UserIcon } from "@heroicons/react/20/solid";
 
 export default function Roberto() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -25,10 +20,14 @@ export default function Roberto() {
   };
 
   const tabs: Tab[] = [
-    { name: "My Account", href: "#", icon: UserIcon, current: false },
-    { name: "Company", href: "#", icon: BuildingOfficeIcon, current: false },
-    { name: "Team Members", href: "#", icon: UsersIcon, current: true },
-    { name: "Billing", href: "#", icon: CreditCardIcon, current: false },
+    { name: "Mis XV", href: "#", icon: UserIcon, current: true },
+    { name: "Ubicacion", href: "#", icon: MapPinIcon, current: false },
+    {
+      name: "Asistir",
+      href: "#",
+      icon: BookmarkIcon,
+      current: false,
+    },
   ];
 
   function classNames(...classes: string[]): string {
@@ -38,65 +37,47 @@ export default function Roberto() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          <div>
-            <div className="sm:hidden">
-              <label htmlFor="tabs" className="sr-only">
-                Select a tab
-              </label>
-              {/* Use an "onChange" listener to redirect the user to the selected tab URL. */}
-              <select
-                id="tabs"
-                name="tabs"
-                defaultValue={tabs.find((tab) => tab.current)?.name}
-                className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
-              >
+        <div className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 from-zinc-200 pb-5 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+          <div className="flex justify-center items-center mb-2">
+            <Button
+              shape="circle"
+              color="primary"
+              variant="outline"
+              onClick={toggleMusic}
+            >
+              {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+            </Button>
+          </div>
+          <div className="flex justify-center">
+            <div className="border-b border-gray-200">
+              <nav aria-label="Tabs" className="-mb-px flex space-x-8">
                 {tabs.map((tab) => (
-                  <option key={tab.name}>{tab.name}</option>
-                ))}
-              </select>
-            </div>
-            <div className="hidden sm:block">
-              <div className="border-b border-gray-200">
-                <nav aria-label="Tabs" className="-mb-px flex space-x-8">
-                  {tabs.map((tab) => (
-                    <a
-                      key={tab.name}
-                      href={tab.href}
-                      aria-current={tab.current ? "page" : undefined}
+                  <a
+                    key={tab.name}
+                    href={tab.href}
+                    aria-current={tab.current ? "page" : undefined}
+                    className={classNames(
+                      tab.current
+                        ? "border-indigo-500 text-indigo-600"
+                        : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                      "group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium"
+                    )}
+                  >
+                    <tab.icon
+                      aria-hidden="true"
                       className={classNames(
                         tab.current
-                          ? "border-indigo-500 text-indigo-600"
-                          : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
-                        "group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium"
+                          ? "text-indigo-500"
+                          : "text-gray-400 group-hover:text-gray-500",
+                        "-ml-0.5 mr-2 h-5 w-5"
                       )}
-                    >
-                      <tab.icon
-                        aria-hidden="true"
-                        className={classNames(
-                          tab.current
-                            ? "text-indigo-500"
-                            : "text-gray-400 group-hover:text-gray-500",
-                          "-ml-0.5 mr-2 h-5 w-5"
-                        )}
-                      />
-                      <span>{tab.name}</span>
-                    </a>
-                  ))}
-                </nav>
-              </div>
+                    />
+                    <span>{tab.name}</span>
+                  </a>
+                ))}
+              </nav>
             </div>
           </div>
-        </div>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-          </a>
         </div>
       </div>
 
@@ -170,17 +151,6 @@ export default function Roberto() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
-      <div>
-        <Button
-          shape="circle"
-          color="secondary"
-          variant="outline"
-          onClick={toggleMusic}
-          style={{ position: "fixed", top: "10px", left: "10px", zIndex: 1000 }}
-        >
-          {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-        </Button>
       </div>
       <BackgroundMusic src="OutofSight.mp3" isPlaying={isPlaying} />
       <div className="w-full flex justify-center space-x-14">
