@@ -22,7 +22,6 @@ const Location: React.FC<LocationProps> = ({ location }) => {
         <Image
           src="/localizacion.png"
           alt="localizacion"
-          className="dark:invert"
           width={100}
           height={24}
           priority
