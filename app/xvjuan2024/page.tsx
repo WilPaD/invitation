@@ -22,11 +22,11 @@ export default function Roberto() {
   };
 
   const tabs: Tab[] = [
-    { name: "Mis XV", href: "#", icon: UserIcon, current: true },
-    { name: "Ubicacion", href: "#", icon: MapPinIcon, current: false },
+    { name: "Mis XV", href: "#home", icon: UserIcon, current: true },
+    { name: "Ubicacion", href: "#ubicacion", icon: MapPinIcon, current: false },
     {
       name: "Asistir",
-      href: "#",
+      href: "#asistir",
       icon: BookmarkIcon,
       current: false,
     },
@@ -37,7 +37,7 @@ export default function Roberto() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-24">
+    <main className="flex relative min-h-screen flex-col items-center justify-between py-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <div className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 from-zinc-200 pb-5 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           <div className="flex justify-center items-center mb-2">
@@ -82,7 +82,10 @@ export default function Roberto() {
           </div>
         </div>
       </div>
-      <div className="flex min-h-[100dvh] flex-col bg-[url('/xv-party-bg.jpg')] bg-cover bg-center bg-no-repeat">
+      <div
+        id="home"
+        className="flex min-h-[100dvh] flex-col bg-[url('/xv-party-bg.jpg')] bg-cover bg-center bg-no-repeat"
+      >
         <div className="flex-1 px-4 py-12 sm:px-8 sm:py-16">
           <div className="mx-auto max-w-3xl space-y-8">
             <div className="rounded-xl bg-background/80 p-6 sm:p-8">
@@ -95,11 +98,14 @@ export default function Roberto() {
               />
               <div className="mt-4 text-center">
                 <p className="text-lg font-medium text-primary">
-                  ¡Celebremos juntos este momento tan especial!
+                  ¡Un momento tan especial!
                 </p>
                 <p className="text-muted-foreground font-italic">
-                  Acompáñanos a honrar los 15 años de María en una fiesta llena
-                  de alegría, amor y recuerdos que perdurarán para siempre.
+                  Hoy, hace 15 años mis padres daban gracia a Dios por mi. Hoy
+                  doy gracias a Dios por ellos por cuidarme, tenerme paciencia y
+                  aconsejarme. Tambien doy gracias a dios a mi familia por hacer
+                  mas especial ese dia. Y a mis amigos por enseñarme el valor de
+                  una verdadera amistad
                 </p>
               </div>
             </div>
@@ -151,9 +157,9 @@ export default function Roberto() {
                   ¡Celebremos juntos este momento tan especial!
                 </p>
                 <p className="text-muted-foreground font-italic">
-                  Acompáñanos a honrar a los padres de María en esta fiesta
-                  llena de alegría, amor y recuerdos que perdurarán para
-                  siempre.
+                  Acompaña a Victoria Garcia Gomez y Juan Carlos Tique Suárez
+                  los padres de Juan Roberto en esta fiesta llena de alegría,
+                  amor y recuerdos que perdurarán para siempre.
                 </p>
               </div>
             </div>
@@ -170,7 +176,7 @@ export default function Roberto() {
                   ¡Celebremos juntos este momento tan especial!
                 </p>
                 <p className="text-muted-foreground font-italic">
-                  Acompáñanos a honrar a los padrinos de la cumplañera en esta
+                  Acompáñanos a honrar a los padrinos de Juan Roberto en esta
                   fiesta llena de alegría, amor y recuerdos que perdurarán para
                   siempre.
                 </p>
@@ -216,8 +222,8 @@ export default function Roberto() {
                   Dirección: Entrada Roma, La Providencia, 86693
                 </p>
                 <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  href="https://maps.app.goo.gl/GBn2XjaqejV58VJu5"
+                  className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   prefetch={false}
                 >
                   <MapIcon className="h-5 w-5" />
@@ -225,7 +231,10 @@ export default function Roberto() {
                 </Link>
               </div>
             </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div
+              id="ubicacion"
+              className="rounded-xl bg-background/80 p-6 sm:p-8"
+            >
               <Image
                 src="/placeholder.svg"
                 width={800}
@@ -236,17 +245,14 @@ export default function Roberto() {
               <div className="mt-4">
                 <h2 className="text-2xl font-bold text-primary">Ubicación</h2>
                 <p className="text-muted-foreground">
-                  La fiesta de XV Años de María se llevará a cabo en el Hotel
-                  Grand Plaza, en el Salón Diamante. El hotel se encuentra
-                  ubicado en el centro de la ciudad, a solo 10 minutos del
-                  aeropuerto y con fácil acceso a transporte público. Cuenta con
-                  amplios estacionamientos y todas las comodidades para que
-                  nuestros invitados disfruten de una velada inolvidable.
+                  La fiesta de XV Años de María se llevará a cabo en el Casino
+                  Social de la piedra 2da. Cuenta contodas las comodidades para
+                  que nuestros invitados disfruten de una velada inolvidable.
                 </p>
                 <p className="text-muted-foreground">Hora: 7:00 PM</p>
                 <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
+                  className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   prefetch={false}
                 >
                   <MapIcon className="h-5 w-5" />
@@ -254,7 +260,10 @@ export default function Roberto() {
                 </Link>
               </div>
             </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div
+              id="asistir"
+              className="rounded-xl bg-background/80 p-6 sm:p-8"
+            >
               <Image
                 src="/placeholder.svg"
                 width={800}
@@ -269,15 +278,24 @@ export default function Roberto() {
                 <p className="text-muted-foreground">
                   Para poder organizar mejor la fiesta, te pedimos que confirmes
                   tu asistencia lo antes posible. Puedes hacerlo a través de
-                  nuestro formulario en línea o enviando un correo electrónico a
-                  info@xvanos.com. ¡Esperamos contar con tu presencia para hacer
-                  de este día un momento inolvidable!
+                  este boton que te mandar con el contato directo de WhatApp.
+                  ¡Esperamos contar con tu presencia para hacer de este día un
+                  momento inolvidable!
                 </p>
                 <Link
-                  href="#"
-                  className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
+                  className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   prefetch={false}
                 >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M149.61,85.71l-89.6,88a8,8,0,0,1-11.22,0L10.39,136a8,8,0,1,1,11.22-11.41L54.4,156.79l84-82.5a8,8,0,1,1,11.22,11.42Zm96.1-11.32a8,8,0,0,0-11.32-.1l-84,82.5-18.83-18.5a8,8,0,0,0-11.21,11.42l24.43,24a8,8,0,0,0,11.22,0l89.6-88A8,8,0,0,0,245.71,74.39Z"></path>
+                  </svg>
                   Confirmar Asistencia
                 </Link>
               </div>
@@ -296,9 +314,9 @@ export default function Roberto() {
             </div>
           </div>
         </div>
-        <footer className="bg-primary-foreground/80 py-4 px-4 text-center text-sm text-primary sm:px-8">
+        <footer className="absolute flex justify-center bottom-0 bg-primary-foreground/80 py-4 px-4 text-center text-sm text-primary sm:px-8">
           <p>
-            &copy; 2024 Fiesta de XV Años de María. Todos los derechos
+            &copy; 2024 Fiesta de XV Años de Juan Roberto. Todos los derechos
             reservados.
           </p>
         </footer>
