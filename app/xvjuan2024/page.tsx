@@ -1,5 +1,5 @@
 "use client";
-import { useState, FC } from "react";
+import { useState, FC, JSX, SVGProps } from "react";
 import BackgroundMusic from "@/app/components/BackgroundMusic";
 import Location from "@/app/components/Location";
 import { Button } from "keep-react";
@@ -336,7 +336,7 @@ export default function Roberto() {
   );
 }
 
-function CalendarIcon(props) {
+function CalendarIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -358,7 +358,7 @@ function CalendarIcon(props) {
   );
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -377,7 +377,7 @@ function CheckIcon(props) {
   );
 }
 
-function ClockIcon(props) {
+function ClockIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -397,7 +397,7 @@ function ClockIcon(props) {
   );
 }
 
-function HomeIcon(props) {
+function HomeIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -417,7 +417,7 @@ function HomeIcon(props) {
   );
 }
 
-function MapIcon(props) {
+function MapIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -438,7 +438,7 @@ function MapIcon(props) {
   );
 }
 
-function MapPinIcon(props) {
+function MapPinIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
@@ -458,7 +458,7 @@ function MapPinIcon(props) {
   );
 }
 
-function XIcon(props) {
+function XIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
