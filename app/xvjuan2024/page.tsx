@@ -176,7 +176,7 @@ export default function Roberto() {
                   ¡Celebremos juntos este momento tan especial!
                 </p>
                 <p className="text-muted-foreground font-italic">
-                  Acompáñanos a honrar a los padrinos de Juan Roberto en esta
+                  Acompaña a Gabriela Tique Pérez a honrar como madrina a Juan Roberto en esta
                   fiesta llena de alegría, amor y recuerdos que perdurarán para
                   siempre.
                 </p>
