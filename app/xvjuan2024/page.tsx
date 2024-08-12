@@ -82,21 +82,18 @@ export default function Roberto() {
           </div>
         </div>
       </div>
-      <div
-        id="home"
-        className="flex min-h-[100dvh] flex-col bg-[url('/xv-party-bg.jpg')] bg-cover bg-center bg-no-repeat"
-      >
-        <div className="flex-1 px-4 py-12 sm:px-8 sm:py-16">
+      <div id="home" className="flex min-h-[100dvh] flex-col">
+        <div className="flex-1 py-10 sm:py-16">
           <div className="mx-auto max-w-3xl space-y-8">
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
+                src="/img/xv1.jpg"
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
                 className="mx-auto rounded-xl"
               />
-              <div className="mt-4 text-center">
+              <div className="mt-4 text-center p-6 sm:p-8">
                 <p className="text-lg font-medium text-primary">
                   ¡Un momento tan especial!
                 </p>
@@ -144,15 +141,15 @@ export default function Roberto() {
                 </div>
               </div>
             </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
+                src="/img/xv2.jpg"
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
                 className="mx-auto rounded-xl"
               />
-              <div className="mt-4 text-center">
+              <div className="mt-4 text-center p-6 sm:p-8">
                 <p className="text-lg font-medium text-primary">
                   ¡Celebremos juntos este momento tan especial!
                 </p>
@@ -163,52 +160,34 @@ export default function Roberto() {
                 </p>
               </div>
             </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
+                src="/img/xv4.jpg"
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
                 className="mx-auto rounded-xl"
               />
-              <div className="mt-4 text-center">
+              <div className="mt-4 text-center p-6 sm:p-8">
                 <p className="text-lg font-medium text-primary">
                   ¡Celebremos juntos este momento tan especial!
                 </p>
                 <p className="text-muted-foreground font-italic">
-                  Acompaña a Gabriela Tique Pérez a honrar como madrina a Juan Roberto en esta
-                  fiesta llena de alegría, amor y recuerdos que perdurarán para
-                  siempre.
+                  Acompaña a Gabriela Tique Pérez a honrar como madrina a Juan
+                  Roberto en esta fiesta llena de alegría, amor y recuerdos que
+                  perdurarán para siempre.
                 </p>
               </div>
             </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
-                width={800}
-                height={500}
-                alt="Fiesta de XV Años"
-                className="mx-auto rounded-xl"
-              />
-              <div className="mt-4">
-                <h2 className="text-2xl font-bold text-primary">
-                  Fecha del Evento
-                </h2>
-                <p className="text-muted-foreground">
-                  La fiesta de XV Años de Juan Roberto se llevará a cabo el 14
-                  de Septiembre de 2024 despues de la ceremonia religiosa.
-                </p>
-              </div>
-            </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
-              <Image
-                src="/placeholder.svg"
+                src="/img/xv6.jpg"
                 width={800}
                 height={500}
                 alt="Ceremonia Religiosa"
                 className="mx-auto rounded-xl"
               />
-              <div className="mt-4">
+              <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">
                   Ceremonia Religiosa
                 </h2>
@@ -231,18 +210,15 @@ export default function Roberto() {
                 </Link>
               </div>
             </div>
-            <div
-              id="ubicacion"
-              className="rounded-xl bg-background/80 p-6 sm:p-8"
-            >
+            <div id="ubicacion" className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
+                src="/img/xv7.jpg"
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
                 className="mx-auto rounded-xl"
               />
-              <div className="mt-4">
+              <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">Ubicación</h2>
                 <p className="text-muted-foreground">
                   La fiesta de XV Años de María se llevará a cabo en el Casino
@@ -250,6 +226,7 @@ export default function Roberto() {
                   que nuestros invitados disfruten de una velada inolvidable.
                 </p>
                 <p className="text-muted-foreground">Hora: 7:00 PM</p>
+                <button className="btn-94"></button>
                 <Link
                   href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
                   className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -260,18 +237,15 @@ export default function Roberto() {
                 </Link>
               </div>
             </div>
-            <div
-              id="asistir"
-              className="rounded-xl bg-background/80 p-6 sm:p-8"
-            >
+            <div id="asistir" className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
+                src="/img/xv9.jpg"
                 width={800}
                 height={500}
                 alt="Confirmación de Asistencia"
                 className="mx-auto rounded-xl"
               />
-              <div className="mt-4">
+              <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">
                   Confirmación de Asistencia
                 </h2>
@@ -300,9 +274,9 @@ export default function Roberto() {
                 </Link>
               </div>
             </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+            <div className="rounded-xl bg-background/80">
               <Image
-                src="/placeholder.svg"
+                src="/img/xv10.jpg"
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
@@ -336,7 +310,9 @@ export default function Roberto() {
   );
 }
 
-function CalendarIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
+function CalendarIcon(
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) {
   return (
     <svg
       {...props}
