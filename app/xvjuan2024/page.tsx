@@ -7,6 +7,7 @@ import { Play, Pause } from "phosphor-react";
 import { BookmarkIcon, UserIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
+import ConfirmationButton from "@/app/components/ConfirmationButton";
 
 export default function Roberto() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -125,7 +126,9 @@ export default function Roberto() {
                     <ClockIcon className="h-6 w-6 text-primary" />
                     <div>
                       <p className="text-lg font-medium">Hora</p>
-                      <p className="text-muted-foreground">4:00 PM</p>
+                      <p className="text-muted-foreground">
+                        Iniciando con la ceremonía religiosa a las 4:00 PM
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2" id="location">
@@ -133,8 +136,9 @@ export default function Roberto() {
                     <div>
                       <p className="text-lg font-medium">Lugar</p>
                       <p className="text-muted-foreground">
-                        Iniciando con la ceremonia religiosa en la iglesia La
-                        Divina Providencia
+                        Para facilitar su ubicación, hemos situado los botones
+                        en la parte inferior, que los dirigirán mediante Google
+                        Maps.
                       </p>
                     </div>
                   </div>
@@ -154,9 +158,9 @@ export default function Roberto() {
                   ¡Celebremos juntos este momento tan especial!
                 </p>
                 <p className="text-muted-foreground font-italic">
-                  Acompaña a Victoria Garcia Gomez y Juan Carlos Tique Suárez
-                  los padres de Juan Roberto en esta fiesta llena de alegría,
-                  amor y recuerdos que perdurarán para siempre.
+                  Únete a Victoria García Gómez y Juan Carlos Tique Suárez, los
+                  padres de Juan Roberto, en esta celebración llena de alegría,
+                  amor y recuerdos imborrables.
                 </p>
               </div>
             </div>
@@ -181,7 +185,7 @@ export default function Roberto() {
             </div>
             <div className="rounded-xl bg-background/80">
               <Image
-                src="/img/xv6.jpg"
+                src="/img/iglesia.jpeg"
                 width={800}
                 height={500}
                 alt="Ceremonia Religiosa"
@@ -193,12 +197,10 @@ export default function Roberto() {
                 </h2>
                 <p className="text-muted-foreground">
                   Antes de la fiesta de XV Años, se llevará a cabo una ceremonia
-                  religiosa en la Iglesia La Divina Providencia. La ceremonia
-                  comenzará a las 4:00 PM y todos los invitados están
-                  cordialmente invitados a asistir.
+                  religiosa en la Iglesia La Divina Providencia.
                 </p>
                 <p className="text-muted-foreground">
-                  Dirección: Entrada Roma, La Providencia, 86693
+                  La misa dará inicio a las 4:00 PM.
                 </p>
                 <Link
                   href="https://maps.app.goo.gl/GBn2XjaqejV58VJu5"
@@ -219,14 +221,14 @@ export default function Roberto() {
                 className="mx-auto rounded-xl"
               />
               <div className="mt-4 text-center p-6 sm:p-8">
-                <h2 className="text-2xl font-bold text-primary">Ubicación</h2>
+                <h2 className="text-2xl font-bold text-primary">
+                  Ubicación de la fiesta
+                </h2>
                 <p className="text-muted-foreground">
-                  La fiesta de XV Años de María se llevará a cabo en el Casino
-                  Social de la piedra 2da. Cuenta contodas las comodidades para
-                  que nuestros invitados disfruten de una velada inolvidable.
+                  La fiesta de XV Años de Juan Roberto se llevará a cabo en el
+                  Casino Social de La Piedra 2da.
                 </p>
-                <p className="text-muted-foreground">Hora: 7:00 PM</p>
-                <button className="btn-94"></button>
+                <p className="text-muted-foreground">La fiesta dará inicio aproximadamenta a las 7:00 PM</p>
                 <Link
                   href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
                   className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -247,31 +249,18 @@ export default function Roberto() {
               />
               <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">
-                  Confirmación de Asistencia
+                  Confirma tu Asistencia
                 </h2>
                 <p className="text-muted-foreground">
-                  Para poder organizar mejor la fiesta, te pedimos que confirmes
-                  tu asistencia lo antes posible. Puedes hacerlo a través de
-                  este boton que te mandar con el contato directo de WhatApp.
-                  ¡Esperamos contar con tu presencia para hacer de este día un
-                  momento inolvidable!
+                  Al dar click en el siguiente botón escríbenos tu nombre para
+                  agregarte en la lista de invitados, nos gustaría contar con tu
+                  presencia.
                 </p>
-                <Link
-                  href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
-                  className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                  prefetch={false}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M149.61,85.71l-89.6,88a8,8,0,0,1-11.22,0L10.39,136a8,8,0,1,1,11.22-11.41L54.4,156.79l84-82.5a8,8,0,1,1,11.22,11.42Zm96.1-11.32a8,8,0,0,0-11.32-.1l-84,82.5-18.83-18.5a8,8,0,0,0-11.21,11.42l24.43,24a8,8,0,0,0,11.22,0l89.6-88A8,8,0,0,0,245.71,74.39Z"></path>
-                  </svg>
-                  Confirmar Asistencia
-                </Link>
+
+                <ConfirmationButton
+                  phone="9931269013"
+                  message={`¡Confirmo mi Asistencia! \n\nSoy: `}
+                />
               </div>
             </div>
             <div className="rounded-xl bg-background/80">
