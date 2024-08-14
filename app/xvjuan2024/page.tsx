@@ -41,12 +41,7 @@ export default function Roberto() {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <div className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 from-zinc-200 pb-5 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           <div className="flex justify-center items-center mb-2">
-            <Button
-              shape="circle"
-              color="primary"
-              variant="outline"
-              onClick={toggleMusic}
-            >
+            <Button shape="circle" color="secondary" onClick={toggleMusic}>
               {isPlaying ? <Pause size={20} /> : <Play size={20} />}
             </Button>
           </div>
@@ -60,8 +55,8 @@ export default function Roberto() {
                     aria-current={tab.current ? "page" : undefined}
                     className={classNames(
                       tab.current
-                        ? "border-indigo-500 text-indigo-600"
-                        : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700",
+                        ? "border-black text-black"
+                        : "border-transparent text-gray-200 hover:border-gray-300 hover:text-white",
                       "group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium"
                     )}
                   >
@@ -69,8 +64,8 @@ export default function Roberto() {
                       aria-hidden="true"
                       className={classNames(
                         tab.current
-                          ? "text-indigo-500"
-                          : "text-gray-400 group-hover:text-gray-500",
+                          ? "text-black"
+                          : "text-gray-200 group-hover:text-white",
                         "-ml-0.5 mr-2 h-5 w-5"
                       )}
                     />
@@ -86,13 +81,18 @@ export default function Roberto() {
         <div className="flex-1 py-10 sm:py-16">
           <div className="mx-auto max-w-3xl space-y-8">
             <div className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv1.jpg"
-                width={800}
-                height={500}
-                alt="Fiesta de XV Años"
-                className="mx-auto rounded-xl"
-              />
+              <div
+                className="relative bg-cover bg-center"
+                style={{ backgroundImage: "url('/img/xv1.png')" }}
+              >
+                <Image
+                  src="/img/xv1.jpg"
+                  width={800}
+                  height={500}
+                  alt="Fiesta de XV Años"
+                  className="mx-auto"
+                />
+              </div>
               <div className="mt-4 text-center p-6 sm:p-8">
                 <p className="text-lg font-medium text-primary">
                   ¡Un momento tan especial!
@@ -142,13 +142,18 @@ export default function Roberto() {
               </div>
             </div>
             <div className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv2.jpg"
-                width={800}
-                height={500}
-                alt="Fiesta de XV Años"
-                className="mx-auto rounded-xl"
-              />
+              <div
+                className="relative bg-cover bg-center rounded-t-2xl"
+                style={{ backgroundImage: "url('/img/xv2.jpg')" }}
+              >
+                <Image
+                  src="/wave2.svg"
+                  width={800}
+                  height={500}
+                  alt="Fiesta de XV Años"
+                  className="mx-auto rounded-xl"
+                />
+              </div>
               <div className="mt-4 text-center p-6 sm:p-8">
                 <p className="text-lg font-medium text-primary">
                   ¡Celebremos juntos este momento tan especial!
@@ -166,7 +171,7 @@ export default function Roberto() {
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
-                className="mx-auto rounded-xl"
+                className="mx-auto"
               />
               <div className="mt-4 text-center p-6 sm:p-8">
                 <p className="text-lg font-medium text-primary">
@@ -180,13 +185,18 @@ export default function Roberto() {
               </div>
             </div>
             <div className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv6.jpg"
-                width={800}
-                height={500}
-                alt="Ceremonia Religiosa"
-                className="mx-auto rounded-xl"
-              />
+              <div
+                className="relative bg-cover bg-center rounded-t-2xl"
+                style={{ backgroundImage: "url('/img/xv6.jpg')" }}
+              >
+                <Image
+                  src="/wave2.svg"
+                  width={800}
+                  height={500}
+                  alt="Ceremonia Religiosa"
+                  className="mx-auto rounded-xl"
+                />
+              </div>
               <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">
                   Ceremonia Religiosa
@@ -211,13 +221,18 @@ export default function Roberto() {
               </div>
             </div>
             <div id="ubicacion" className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv7.jpg"
-                width={800}
-                height={500}
-                alt="Fiesta de XV Años"
-                className="mx-auto rounded-xl"
-              />
+              <div
+                className="relative bg-cover bg-center rounded-b-2xl"
+                style={{ backgroundImage: "url('/img/xv7.jpg')" }}
+              >
+                <Image
+                  src="/wave.svg"
+                  width={800}
+                  height={500}
+                  alt="Fiesta de XV Años"
+                  className="mx-auto rounded-xl"
+                />
+              </div>
               <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">Ubicación</h2>
                 <p className="text-muted-foreground">
@@ -238,13 +253,18 @@ export default function Roberto() {
               </div>
             </div>
             <div id="asistir" className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv9.jpg"
-                width={800}
-                height={500}
-                alt="Confirmación de Asistencia"
-                className="mx-auto rounded-xl"
-              />
+              <div
+                className="relative bg-cover bg-center rounded-t-2xl"
+                style={{ backgroundImage: "url('/img/xv9.jpg')" }}
+              >
+                <Image
+                  src="/wave2.svg"
+                  width={800}
+                  height={500}
+                  alt="Confirmación de Asistencia"
+                  className="mx-auto rounded-xl"
+                />
+              </div>
               <div className="mt-4 text-center p-6 sm:p-8">
                 <h2 className="text-2xl font-bold text-primary">
                   Confirmación de Asistencia
@@ -280,7 +300,7 @@ export default function Roberto() {
                 width={800}
                 height={500}
                 alt="Fiesta de XV Años"
-                className="mx-auto rounded-xl"
+                className="mx-auto"
               />
               <div className="mt-4 text-center">
                 <h2 className="text-3xl font-bold text-primary">¡No Faltes!</h2>
