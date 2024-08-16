@@ -244,7 +244,7 @@ export default function Roberto() {
                   Casino Social de La Piedra 2da.
                 </p>
                 <p className="text-muted-foreground">
-                  La fiesta dará inicio aproximadamenta a las 7:00 PM
+                  La fiesta dará inicio aproximadamenta a las 6:00 PM
                 </p>
                 <Link
                   href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
