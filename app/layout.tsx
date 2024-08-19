@@ -5,7 +5,12 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "XV Juan"
+  title: "Mis XV Años",
+  description: "Invitación digital de la celebración",
+  openGraph: {
+    title: "Celebración Juan Roberto",
+    images: ["/public/img/xv9.jpg"],
+  },
 };
 
 export default function RootLayout({
