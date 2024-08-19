@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mis XV Años",
-  description: "Invitación digital de la celebración"
+  title: "Principal",
+  description: "Sin descripción por el momento"
 };
 
 export default function RootLayout({
