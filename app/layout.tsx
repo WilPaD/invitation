@@ -6,11 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Mis XV Años",
-  description: "Invitación digital de la celebración",
-  openGraph: {
-    title: "Celebración Juan Roberto",
-    images: ["/public/img/xv9.jpg"],
-  },
+  description: "Invitación digital de la celebración"
 };
 
 export default function RootLayout({
