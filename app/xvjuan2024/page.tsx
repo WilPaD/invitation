@@ -8,12 +8,6 @@ import { BookmarkIcon, UserIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
 import ConfirmationButton from "@/app/components/ConfirmationButton";
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: '¡Mis XV Años!',
-  description: 'Invitación digital de la celebración',
-}
 
 export default function Roberto() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
