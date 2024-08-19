@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 export const metadata: Metadata = {
-  title: "Mis XV Años",
+  title: "XV Años - Juan Roberto",
   metadataBase: new URL("https://padga.dev"),
-  openGraph:{
-	description: "Invitación digital de la celebración",
-	images: ['/img/xv6-r.jpg'],
+  openGraph: {
+    description: "Invitación digital de la celebración",
   },
-  icons: ["/img/xv6-r.jpg"],
 };
 
 export default function XVJuanLayout({
@@ -16,6 +15,12 @@ export default function XVJuanLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          property="og:image"
+          content="https://padga.dev/img/xv6-r.jpg"
+        />
+      </Head>
       <body>{children}</body>
     </html>
   );
