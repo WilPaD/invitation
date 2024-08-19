@@ -7,6 +7,7 @@ import { Play, Pause } from "phosphor-react";
 import { BookmarkIcon, UserIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
+import Head from 'next/head'
 import ConfirmationButton from "@/app/components/ConfirmationButton";
 
 export default function Roberto() {
@@ -38,277 +39,287 @@ export default function Roberto() {
   }
 
   return (
-    <main className="flex relative min-h-screen flex-col items-center justify-between py-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <div className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 from-zinc-200 pb-5 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          <div className="flex justify-center items-center mb-2">
-            <Button shape="circle" color="secondary" onClick={toggleMusic}>
-              {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-            </Button>
-          </div>
-          <div className="flex justify-center">
-            <div className="border-b border-gray-200">
-              <nav aria-label="Tabs" className="-mb-px flex space-x-8">
-                {tabs.map((tab) => (
-                  <a
-                    key={tab.name}
-                    href={tab.href}
-                    aria-current={tab.current ? "page" : undefined}
-                    className={classNames(
-                      tab.current
-                        ? "border-black text-black"
-                        : "border-transparent text-gray-200 hover:border-gray-300 hover:text-white",
-                      "group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium"
-                    )}
-                  >
-                    <tab.icon
-                      aria-hidden="true"
+    <>
+      <Head>
+        <meta property="og:title" content="¡Mis XV!" />
+        <meta property="og:description" content="Invitación digital para la celebración" />
+        <meta property="og:image" content="/public/img/xv9.jpg" />
+      </Head>
+      <main className="flex relative min-h-screen flex-col items-center justify-between py-24">
+        <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+          <div className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 from-zinc-200 pb-5 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
+            <div className="flex justify-center items-center mb-2">
+              <Button shape="circle" color="secondary" onClick={toggleMusic}>
+                {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+              </Button>
+            </div>
+            <div className="flex justify-center">
+              <div className="border-b border-gray-200">
+                <nav aria-label="Tabs" className="-mb-px flex space-x-8">
+                  {tabs.map((tab) => (
+                    <a
+                      key={tab.name}
+                      href={tab.href}
+                      aria-current={tab.current ? "page" : undefined}
                       className={classNames(
                         tab.current
-                          ? "text-black"
-                          : "text-gray-200 group-hover:text-white",
-                        "-ml-0.5 mr-2 h-5 w-5"
+                          ? "border-black text-black"
+                          : "border-transparent text-gray-200 hover:border-gray-300 hover:text-white",
+                        "group inline-flex items-center border-b-2 px-1 py-4 text-sm font-medium"
                       )}
-                    />
-                    <span>{tab.name}</span>
-                  </a>
-                ))}
-              </nav>
+                    >
+                      <tab.icon
+                        aria-hidden="true"
+                        className={classNames(
+                          tab.current
+                            ? "text-black"
+                            : "text-gray-200 group-hover:text-white",
+                          "-ml-0.5 mr-2 h-5 w-5"
+                        )}
+                      />
+                      <span>{tab.name}</span>
+                    </a>
+                  ))}
+                </nav>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="home" className="flex min-h-[100dvh] flex-col">
-        <div className="flex-1 py-10 sm:py-16">
-          <div className="mx-auto max-w-3xl space-y-8">
-            <div className="rounded-xl bg-background/80">
-              <div
-                className="relative bg-cover bg-center"
-                style={{ backgroundImage: "url('/img/xv1.png')" }}
-              >
+        <div id="home" className="flex min-h-[100dvh] flex-col">
+          <div className="flex-1 py-10 sm:py-16">
+            <div className="mx-auto max-w-3xl space-y-8">
+              <div className="rounded-xl bg-background/80">
+                <div
+                  className="relative bg-cover bg-center"
+                  style={{ backgroundImage: "url('/img/xv1.png')" }}
+                >
+                  <Image
+                    src="/img/xv1.jpg"
+                    width={800}
+                    height={500}
+                    alt="Fiesta de XV Años"
+                    className="mx-auto"
+                  />
+                </div>
+                <div className="mt-4 text-center p-6 sm:p-8">
+                  <p className="text-lg font-medium text-primary">
+                    ¡Un momento tan especial!
+                  </p>
+                  <p className="text-muted-foreground font-italic">
+                    Hoy, hace 15 años mis padres daban gracia a Dios por mí. Hoy
+                    doy gracias a Dios por ellos por cuidarme, tenerme paciencia
+                    y aconsejarme. También doy gracias a Dios y a mi familia por
+                    hacer más especial ese dia, de igual manera, a mis amigos
+                    por enseñarme el valor de una verdadera amistad.
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-xl bg-background/80 p-6 sm:p-8">
+                <div className="space-y-4">
+                  <div>
+                    <h2 className="text-2xl font-bold text-primary">
+                      Detalles
+                    </h2>
+                  </div>
+                  <div className="grid grid-cols-1 gap-4">
+                    <div className="flex items-center gap-2">
+                      <CalendarIcon className="h-6 w-6 text-primary" />
+                      <div>
+                        <p className="text-lg font-medium">Fecha</p>
+                        <p className="text-muted-foreground">
+                          14 de Septiembre del 2024
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <ClockIcon className="h-6 w-6 text-primary" />
+                      <div>
+                        <p className="text-lg font-medium">Hora</p>
+                        <p className="text-muted-foreground">
+                          Iniciando con la ceremonía religiosa a las 4:00 PM
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2" id="location">
+                      <MapPinIcon className="h-6 w-6 text-primary" />
+                      <div>
+                        <p className="text-lg font-medium">Lugar</p>
+                        <p className="text-muted-foreground">
+                          Para facilitar su ubicación, hemos situado los botones
+                          en la parte inferior, que los dirigirán mediante
+                          Google Maps.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-xl bg-background/80">
+                <div
+                  className="relative bg-cover bg-center rounded-t-2xl"
+                  style={{ backgroundImage: "url('/img/xv2.jpg')" }}
+                >
+                  <Image
+                    src="/wave2.svg"
+                    width={800}
+                    height={500}
+                    alt="Fiesta de XV Años"
+                    className="mx-auto rounded-xl"
+                  />
+                </div>
+                <div className="mt-4 text-center p-6 sm:p-8">
+                  <p className="text-lg font-medium text-primary">
+                    ¡Celebremos juntos este momento tan especial!
+                  </p>
+                  <p className="text-muted-foreground font-italic">
+                    Únete a Victoria García Gómez y Juan Carlos Tique Suárez,
+                    los padres de Juan Roberto, en esta celebración llena de
+                    alegría, amor y recuerdos imborrables.
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-xl bg-background/80">
                 <Image
-                  src="/img/xv1.jpg"
+                  src="/img/xv4.jpg"
                   width={800}
                   height={500}
                   alt="Fiesta de XV Años"
                   className="mx-auto"
                 />
-              </div>
-              <div className="mt-4 text-center p-6 sm:p-8">
-                <p className="text-lg font-medium text-primary">
-                  ¡Un momento tan especial!
-                </p>
-                <p className="text-muted-foreground font-italic">
-                  Hoy, hace 15 años mis padres daban gracia a Dios por mi. Hoy
-                  doy gracias a Dios por ellos por cuidarme, tenerme paciencia y
-                  aconsejarme. Tambien doy gracias a dios a mi familia por hacer
-                  mas especial ese dia. Y a mis amigos por enseñarme el valor de
-                  una verdadera amistad
-                </p>
-              </div>
-            </div>
-            <div className="rounded-xl bg-background/80 p-6 sm:p-8">
-              <div className="space-y-4">
-                <div>
-                  <h2 className="text-2xl font-bold text-primary">Detalles</h2>
-                </div>
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="flex items-center gap-2">
-                    <CalendarIcon className="h-6 w-6 text-primary" />
-                    <div>
-                      <p className="text-lg font-medium">Fecha</p>
-                      <p className="text-muted-foreground">
-                        14 de Septiembre, 2024
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <ClockIcon className="h-6 w-6 text-primary" />
-                    <div>
-                      <p className="text-lg font-medium">Hora</p>
-                      <p className="text-muted-foreground">
-                        Iniciando con la ceremonía religiosa a las 4:00 PM
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2" id="location">
-                    <MapPinIcon className="h-6 w-6 text-primary" />
-                    <div>
-                      <p className="text-lg font-medium">Lugar</p>
-                      <p className="text-muted-foreground">
-                        Para facilitar su ubicación, hemos situado los botones
-                        en la parte inferior, que los dirigirán mediante Google
-                        Maps.
-                      </p>
-                    </div>
-                  </div>
+                <div className="mt-4 text-center p-6 sm:p-8">
+                  <p className="text-lg font-medium text-primary">
+                    ¡Celebremos juntos este momento tan especial!
+                  </p>
+                  <p className="text-muted-foreground font-italic">
+                    Acompaña a Gabriela Tique Pérez a honrar como madrina a Juan
+                    Roberto en esta fiesta llena de alegría, amor y recuerdos
+                    que perdurarán para siempre.
+                  </p>
                 </div>
               </div>
-            </div>
-            <div className="rounded-xl bg-background/80">
-              <div
-                className="relative bg-cover bg-center rounded-t-2xl"
-                style={{ backgroundImage: "url('/img/xv2.jpg')" }}
-              >
-                <Image
-                  src="/wave2.svg"
-                  width={800}
-                  height={500}
-                  alt="Fiesta de XV Años"
-                  className="mx-auto rounded-xl"
-                />
-              </div>
-              <div className="mt-4 text-center p-6 sm:p-8">
-                <p className="text-lg font-medium text-primary">
-                  ¡Celebremos juntos este momento tan especial!
-                </p>
-                <p className="text-muted-foreground font-italic">
-                  Únete a Victoria García Gómez y Juan Carlos Tique Suárez, los
-                  padres de Juan Roberto, en esta celebración llena de alegría,
-                  amor y recuerdos imborrables.
-                </p>
-              </div>
-            </div>
-            <div className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv4.jpg"
-                width={800}
-                height={500}
-                alt="Fiesta de XV Años"
-                className="mx-auto"
-              />
-              <div className="mt-4 text-center p-6 sm:p-8">
-                <p className="text-lg font-medium text-primary">
-                  ¡Celebremos juntos este momento tan especial!
-                </p>
-                <p className="text-muted-foreground font-italic">
-                  Acompaña a Gabriela Tique Pérez a honrar como madrina a Juan
-                  Roberto en esta fiesta llena de alegría, amor y recuerdos que
-                  perdurarán para siempre.
-                </p>
-              </div>
-            </div>
-            <div className="rounded-xl bg-background/80">
-              <div
-                className="relative bg-cover bg-center rounded-t-2xl"
-                style={{ backgroundImage: "url('/img/iglesia.jpeg')" }}
-              >
-                <Image
-                  src="/wave2.svg"
-                  width={800}
-                  height={500}
-                  alt="Ceremonia Religiosa"
-                  className="mx-auto rounded-xl"
-                />
-              </div>
-              <div className="mt-4 text-center p-6 sm:p-8">
-                <h2 className="text-2xl font-bold text-primary">
-                  Ceremonia Religiosa
-                </h2>
-                <p className="text-muted-foreground">
-                  Antes de la fiesta de XV Años, se llevará a cabo una ceremonia
-                  religiosa en la Iglesia La Divina Providencia.
-                </p>
-                <p className="text-muted-foreground">
-                  La misa dará inicio a las 4:00 PM.
-                </p>
-                <Link
-                  href="https://maps.app.goo.gl/GBn2XjaqejV58VJu5"
-                  className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                  prefetch={false}
+              <div className="rounded-xl bg-background/80">
+                <div
+                  className="relative bg-cover bg-center rounded-t-2xl"
+                  style={{ backgroundImage: "url('/img/iglesia.jpeg')" }}
                 >
-                  <MapIcon className="h-5 w-5" />
-                  Ver en Google Maps
-                </Link>
+                  <Image
+                    src="/wave2.svg"
+                    width={800}
+                    height={500}
+                    alt="Ceremonia Religiosa"
+                    className="mx-auto rounded-xl"
+                  />
+                </div>
+                <div className="mt-4 text-center p-6 sm:p-8">
+                  <h2 className="text-2xl font-bold text-primary">
+                    Ceremonia Religiosa
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Antes de la fiesta de XV Años, se llevará a cabo una
+                    ceremonia religiosa en la Iglesia La Divina Providencia.
+                  </p>
+                  <p className="text-muted-foreground">
+                    La misa dará inicio a las 4:00 PM.
+                  </p>
+                  <Link
+                    href="https://maps.app.goo.gl/GBn2XjaqejV58VJu5"
+                    className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    prefetch={false}
+                  >
+                    <MapIcon className="h-5 w-5" />
+                    Ver en Google Maps
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div id="ubicacion" className="rounded-xl bg-background/80">
-              <div
-                className="relative bg-cover bg-center rounded-b-2xl"
-                style={{ backgroundImage: "url('/img/xv7.jpg')" }}
-              >
-                <Image
-                  src="/wave.svg"
-                  width={800}
-                  height={500}
-                  alt="Fiesta de XV Años"
-                  className="mx-auto rounded-xl"
-                />
-              </div>
-              <div className="mt-4 text-center p-6 sm:p-8">
-                <h2 className="text-2xl font-bold text-primary">
-                  Ubicación de la fiesta
-                </h2>
-                <p className="text-muted-foreground">
-                  La fiesta de XV Años de Juan Roberto se llevará a cabo en el
-                  Casino Social de La Piedra 2da.
-                </p>
-                <p className="text-muted-foreground">
-                  La fiesta dará inicio aproximadamenta a las 6:00 PM
-                </p>
-                <Link
-                  href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
-                  className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                  prefetch={false}
+              <div id="ubicacion" className="rounded-xl bg-background/80">
+                <div
+                  className="relative bg-cover bg-center rounded-b-2xl"
+                  style={{ backgroundImage: "url('/img/xv7.jpg')" }}
                 >
-                  <MapIcon className="h-5 w-5" />
-                  Ver en Google Maps
-                </Link>
+                  <Image
+                    src="/wave.svg"
+                    width={800}
+                    height={500}
+                    alt="Fiesta de XV Años"
+                    className="mx-auto rounded-xl"
+                  />
+                </div>
+                <div className="mt-4 text-center p-6 sm:p-8">
+                  <h2 className="text-2xl font-bold text-primary">
+                    Ubicación de la fiesta
+                  </h2>
+                  <p className="text-muted-foreground">
+                    La fiesta de XV Años de Juan Roberto se llevará a cabo en el
+                    Casino Social de La Piedra 2da.
+                  </p>
+                  <p className="text-muted-foreground">
+                    La fiesta dará inicio aproximadamenta a las 6:00 PM
+                  </p>
+                  <Link
+                    href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
+                    className="inline-flex items-center mt-4 gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    prefetch={false}
+                  >
+                    <MapIcon className="h-5 w-5" />
+                    Ver en Google Maps
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div id="asistir" className="rounded-xl bg-background/80">
-              <div
-                className="relative bg-cover bg-center rounded-t-2xl"
-                style={{ backgroundImage: "url('/img/xv9.jpg')" }}
-              >
-                <Image
-                  src="/wave2.svg"
-                  width={800}
-                  height={500}
-                  alt="Confirmación de Asistencia"
-                  className="mx-auto rounded-xl"
-                />
-              </div>
-              <div className="mt-4 text-center p-6 sm:p-8">
-                <h2 className="text-2xl font-bold text-primary">
-                  Confirma tu Asistencia
-                </h2>
-                <p className="text-muted-foreground">
-                  Al dar click en el siguiente botón escríbenos tu nombre para
-                  agregarte en la lista de invitados, nos gustaría contar con tu
-                  presencia.
-                </p>
+              <div id="asistir" className="rounded-xl bg-background/80">
+                <div
+                  className="relative bg-cover bg-center rounded-t-2xl"
+                  style={{ backgroundImage: "url('/img/xv9.jpg')" }}
+                >
+                  <Image
+                    src="/wave2.svg"
+                    width={800}
+                    height={500}
+                    alt="Confirmación de Asistencia"
+                    className="mx-auto rounded-xl"
+                  />
+                </div>
+                <div className="mt-4 text-center p-6 sm:p-8">
+                  <h2 className="text-2xl font-bold text-primary">
+                    Confirma tu Asistencia
+                  </h2>
+                  <p className="text-muted-foreground">
+                    Al dar click en el siguiente botón escríbenos tu nombre para
+                    agregarte en la lista de invitados, nos gustaría contar con
+                    tu presencia.
+                  </p>
 
-                <ConfirmationButton
-                  phone="9931269013"
-                  message={`¡Confirmo mi Asistencia! \n\nSoy: `}
-                />
+                  <ConfirmationButton
+                    phone="9931269013"
+                    message={`¡Confirmo mi Asistencia! \n\nSoy: `}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="rounded-xl bg-background/80">
-              <Image
-                src="/img/xv10.jpg"
-                width={800}
-                height={500}
-                alt="Fiesta de XV Años"
-                className="mx-auto"
-              />
-              <div className="mt-4 text-center">
-                <h2 className="text-3xl font-bold text-primary">¡No Faltes!</h2>
+              <div className="rounded-xl bg-background/80">
+                <Image
+                  src="/img/xv10.jpg"
+                  width={800}
+                  height={500}
+                  alt="Fiesta de XV Años"
+                  className="mx-auto"
+                />
+                <div className="mt-4 text-center">
+                  <h2 className="text-3xl font-bold text-primary">
+                    ¡No Faltes!
+                  </h2>
+                </div>
               </div>
             </div>
           </div>
+          <footer className="absolute flex justify-center bottom-0 bg-primary-foreground/80 py-4 px-4 text-center text-sm text-primary sm:px-8">
+            <p>
+              &copy; 2024 Fiesta de XV Años de Juan Roberto. Todos los derechos
+              reservados.
+            </p>
+            <p>Song: The Feels - Twice</p>
+          </footer>
         </div>
-        <footer className="absolute flex justify-center bottom-0 bg-primary-foreground/80 py-4 px-4 text-center text-sm text-primary sm:px-8">
-          <p>
-            &copy; 2024 Fiesta de XV Años de Juan Roberto. Todos los derechos
-            reservados.
-          </p>
-          <p>Song: The Feels - Twice</p>
-        </footer>
-      </div>
-      <BackgroundMusic src="mp3/The_Feels.mp3" isPlaying={isPlaying} />
-      {/* <div className="w-full flex justify-center space-x-14">
+        <BackgroundMusic src="mp3/The_Feels.mp3" isPlaying={isPlaying} />
+        {/* <div className="w-full flex justify-center space-x-14">
         <div className="w-full flex flex-col gap-y-4">
           <p className="text-center">Lugar de Santa Misa</p>
           <Location location="https://maps.app.goo.gl/GBn2XjaqejV58VJu5" />
@@ -318,7 +329,8 @@ export default function Roberto() {
           <Location location="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9" />
         </div>
       </div> */}
-    </main>
+      </main>
+    </>
   );
 }
 
