@@ -3,6 +3,7 @@ export const metadata: Metadata = {
   title: "XV Años - Juan Roberto",
   metadataBase: new URL("https://padga.dev"),
   openGraph: {
+    url: 'https://padga.dev',
     description: "Invitación digital de la celebración",
     images: ["/img/xv6-r.jpg"],
   },
