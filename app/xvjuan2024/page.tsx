@@ -7,8 +7,13 @@ import { Play, Pause } from "phosphor-react";
 import { BookmarkIcon, UserIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-import Head from 'next/head'
 import ConfirmationButton from "@/app/components/ConfirmationButton";
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: '¡Mis XV Años!',
+  description: 'Invitación digital de la celebración',
+}
 
 export default function Roberto() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
@@ -40,11 +45,6 @@ export default function Roberto() {
 
   return (
     <>
-      <Head>
-        <meta property="og:title" content="¡Mis XV!" />
-        <meta property="og:description" content="Invitación digital para la celebración" />
-        <meta property="og:image" content="/public/img/xv9.jpg" />
-      </Head>
       <main className="flex relative min-h-screen flex-col items-center justify-between py-24">
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
           <div className="fixed left-0 top-0 w-full justify-center border-b border-gray-300 from-zinc-200 pb-5 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
