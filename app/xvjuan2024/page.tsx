@@ -24,7 +24,7 @@ export default function Roberto() {
 
   const tabs: Tab[] = [
     { name: "Mis XV", href: "#home", icon: UserIcon, current: true },
-    { name: "Ubicacion", href: "#ubicacion", icon: MapPinIcon, current: false },
+    { name: "Ubicación", href: "#ubicacion", icon: MapPinIcon, current: false },
     {
       name: "Asistir",
       href: "#asistir",
@@ -185,9 +185,9 @@ export default function Roberto() {
                     ¡Celebremos juntos este momento tan especial!
                   </p>
                   <p className="text-muted-foreground font-italic">
-                    Acompaña a Gabriela Tique Pérez a honrar como madrina a Juan
-                    Roberto en esta fiesta llena de alegría, amor y recuerdos
-                    que perdurarán para siempre.
+                    Te invitamos a acompañar a Gabriela Tique Pérez en su rol de 
+                    madrina para honrar a Juan Roberto en esta celebración llena 
+                    de alegría, amor y recuerdos inolvidables.
                   </p>
                 </div>
               </div>
@@ -244,7 +244,7 @@ export default function Roberto() {
                   </h2>
                   <p className="text-muted-foreground">
                     La fiesta de XV Años de Juan Roberto se llevará a cabo en el
-                    Casino Social de La Piedra 2da.
+                    Casino Social de La Piedra 2da, sección.
                   </p>
                   <p className="text-muted-foreground">
                     La fiesta iniciará alrededor de las 6:00 p.m.
