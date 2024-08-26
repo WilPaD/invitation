@@ -100,11 +100,11 @@ export default function Roberto() {
                     ¡Un momento tan especial!
                   </p>
                   <p className="text-muted-foreground font-italic">
-                    Hoy, hace 15 años mis padres daban gracia a Dios por mí. Hoy
-                    doy gracias a Dios por ellos por cuidarme, tenerme paciencia
-                    y aconsejarme. También doy gracias a Dios y a mi familia por
-                    hacer más especial ese dia, de igual manera, a mis amigos
-                    por enseñarme el valor de una verdadera amistad.
+                    Hoy, hace 15 años, mis padres daban gracias a Dios por mí.
+                    Hoy doy gracias a Dios por ellos, por cuidarme, tenerme
+                    paciencia y aconsejarme. También doy gracias a Dios y a mi
+                    familia por hacer ese día más especial. De igual manera, a
+                    mis amigos por enseñarme el valor de una verdadera amistad.
                   </p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Roberto() {
                       <div>
                         <p className="text-lg font-medium">Hora</p>
                         <p className="text-muted-foreground">
-                          Iniciando con la ceremonía religiosa a las 4:00 PM
+                          La ceremonia religiosa dará inicio a las 4:00 p.m.
                         </p>
                       </div>
                     </div>
@@ -139,9 +139,9 @@ export default function Roberto() {
                       <div>
                         <p className="text-lg font-medium">Lugar</p>
                         <p className="text-muted-foreground">
-                          Para facilitar su ubicación, hemos situado los botones
-                          en la parte inferior, que los dirigirán mediante
-                          Google Maps.
+                          Para facilitar su ubicación, hemos colocado botones en
+                          la parte inferior que los guiarán a través de Google
+                          Maps.
                         </p>
                       </div>
                     </div>
@@ -213,7 +213,7 @@ export default function Roberto() {
                     ceremonia religiosa en la Iglesia La Divina Providencia.
                   </p>
                   <p className="text-muted-foreground">
-                    La misa dará inicio a las 4:00 PM.
+                    La misa dará inicio a las 4:00 p.m.
                   </p>
                   <Link
                     href="https://maps.app.goo.gl/GBn2XjaqejV58VJu5"
@@ -247,7 +247,7 @@ export default function Roberto() {
                     Casino Social de La Piedra 2da.
                   </p>
                   <p className="text-muted-foreground">
-                    La fiesta dará inicio aproximadamenta a las 6:00 PM
+                    La fiesta iniciará alrededor de las 6:00 p.m.
                   </p>
                   <Link
                     href="https://maps.app.goo.gl/AZYtiPSzDxr4PSSa9"
@@ -277,9 +277,9 @@ export default function Roberto() {
                     Confirma tu Asistencia
                   </h2>
                   <p className="text-muted-foreground">
-                    Al dar click en el siguiente botón escríbenos tu nombre para
-                    agregarte en la lista de invitados, nos gustaría contar con
-                    tu presencia.
+                    Al hacer clic en el siguiente botón, por favor escribe tu
+                    nombre para que puedas ser agregado a la lista de invitados.
+                    Nos encantaría que pudieras acompañarnos.
                   </p>
 
                   <ConfirmationButton
@@ -304,12 +304,15 @@ export default function Roberto() {
               </div>
             </div>
           </div>
-          <footer className="absolute flex justify-center bottom-0 bg-primary-foreground/80 py-4 px-4 text-center text-sm text-primary sm:px-8">
+          <footer className="absolute flex flex-col justify-center bottom-0 bg-primary-foreground/80 py-4 px-4 text-center text-sm text-primary sm:px-8">
             <p>
               &copy; 2024 Fiesta de XV Años de Juan Roberto. Todos los derechos
               reservados.
             </p>
-            <p>Song: The Feels - Twice</p>
+            <div>
+              <p>Song: </p>
+              <p>The Feels - Twice</p>
+            </div>
           </footer>
         </div>
         <BackgroundMusic src="mp3/The_Feels.mp3" isPlaying={isPlaying} />
