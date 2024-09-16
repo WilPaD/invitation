@@ -311,11 +311,11 @@ export default function Roberto() {
             </p>
             <div>
               <p>Song: </p>
-              <p>The Feels - Twice</p>
+              <p>Out of Sight - Vexento</p>
             </div>
           </footer>
         </div>
-        <BackgroundMusic src="mp3/The_Feels.mp3" isPlaying={isPlaying} />
+        <BackgroundMusic src="mp3/OutofSight.mp3" isPlaying={isPlaying} />
         {/* <div className="w-full flex justify-center space-x-14">
         <div className="w-full flex flex-col gap-y-4">
           <p className="text-center">Lugar de Santa Misa</p>
